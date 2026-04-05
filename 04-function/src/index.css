@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body{
+  background-color: #222;
+  padding: 15px;
+}
+
+button{
+ background-color: #494949;
+ padding: 10px 15px;
+ font-size: 15px;
+ border: none;
+ border-radius: 5px;
+}
+
+input{
+  background-color: #474747;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 15px;
+
+
+}
+
+.parent{
+  display: flex;
+  justify-content: center;
+}
+
+.round{
+  width: 200px;
+  height: 200px;
+  background-color: rgb(156, 156, 136);
+  margin-top: 150px;
+}
