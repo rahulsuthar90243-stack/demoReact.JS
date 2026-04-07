@@ -1,22 +1,23 @@
 import React from 'react'
+import Form from './form.jsx'   
 
 export const App = () => {
 
-
   function submit(e){
-   e.preventDefault();
+    e.preventDefault();
     console.log("Form Submit.");
-    alert("form submit successfull");
+    alert("form submit successful");
   }
 
   return (
     <div>
-      <form  onSubmit={(e)=>{
-       submit(e);
-      }}>
-         <input type="text" placeholder='Enter your message.'/>
-         <button>Submit</button>
+
+      <form onSubmit={submit}>
+        <input type="text" placeholder='Enter your message.'/>
+        <button>Submit</button>
       </form>
+
+     <Form />
     </div>
   )
 }
