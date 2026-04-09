@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Courier, monospace';
+}
+
+body{
+  background-color: black;
+  padding: 20px;
+}
+
+.getdata{
+  padding: 10px 20px;
+  background-color: rgb(161, 161, 161);
+  font-size: large;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  font: bold;
+  cursor: pointer;
+}
+.getdata:active{
+  transform: scale(0.9);
+}
+.main{
+  overflow: auto;
+
+}
+img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.divimg{
+height: 210px;
+}
+
+.printlod{
+  
+  gap: 15px;
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.loding{
+  font-size: larger;
+  color: rgb(156, 156, 156);
+}
+
+a{
+text-decoration: none;
+}
