@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 
 export const App = () => {
   const [UserData, setUserData] = useState([]);
+  const [Index, setIndex] = useState(1)
 
   async function getData() {
     const responce = await axios.get(
-      "https://picsum.photos/v2/list?page=3&limit=20",
+    `https://picsum.photos/v2/list?page=${Index}&limit=15`,
     );
 
     setUserData(responce.data);
@@ -15,9 +16,10 @@ export const App = () => {
 
   useEffect(function(){
     getData();
-  },[])
 
-  let printLoding = <h3 className="loding">loding..</h3>;
+  },[Index])
+
+  let printLoding = <div className="loadingdiv"><h3 className="loading">loading..</h3></div>;
 
   if (UserData.length > 0) {
     printLoding = UserData.map(function (elem, idx) {
@@ -36,12 +38,21 @@ export const App = () => {
 
   return (
     <div className="main">
-
       <div className="printlod">{printLoding}</div>
 
-      <div cla>
-        <button></button>
-        <button></button>
+      <div className="prenext">
+        <button className="btn" style={{opacity: Index == 1 ? 0.6 : 1}}
+        onClick={()=>{
+          if(Index>1){
+            setIndex(Index-1)
+            setUserData([]);
+          }
+        }}>Prev</button>
+        <h3>Page{Index}</h3>
+        <button className="btn" onClick={()=>{
+          setIndex(Index+1)
+          setUserData([]);
+        }}>Next</button>
       </div>
     </div>
   );

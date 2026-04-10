@@ -45,11 +45,37 @@ height: 210px;
   flex-wrap: wrap;
 }
 
-.loding{
+.loadingdiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading{
   font-size: larger;
   color: rgb(156, 156, 156);
 }
 
 a{
 text-decoration: none;
+}
+
+.prenext{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn{
+  padding: 12px 23px;
+  background-color: rgb(233, 144, 28);
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:active{
+  transform: scale(0.9);
 }
