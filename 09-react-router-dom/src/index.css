@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+}
+
+body{
+  background-color: black;
+  color: #fff;
+}
+
+
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(59, 126, 185);
+}
+
+.nav div{
+  display: flex;
+  gap: 40px;
+}
